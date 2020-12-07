@@ -7,7 +7,7 @@ var map = L.map('map')
  layerGroup = L.layerGroup().addTo(map);
 
  var items = [];
- var airtable_read_endpoint = "https://api.airtable.com/v0/appKIU0zkdHt3AVTL/Venues?api_key=keycj6dRwXwYLEjiv";
+ var airtable_read_endpoint = "https://api.airtable.com/v0/appZO4hwQXKmZ6LrP/parkmap?api_key=key7oCf96ZfebBLeo";
  var data = [];
  $.getJSON(airtable_read_endpoint, function(result) {
        $.each(result.records, function(key,value) {
@@ -15,8 +15,8 @@ var map = L.map('map')
                items["name"] = value.fields.Name;
                items["url"] = value.fields.url;
                items["image_url"] = value.fields.img_url;
-               items["latitud"] = value.fields.Lat;
-               items["longitud"] = value.fields.Lng;
+               items["latitud"] = value.fields.lati;
+               items["longitud"] = value.fields.longti;
                data.push(items);
                console.log(items);
         }); // end .each
@@ -41,7 +41,7 @@ function clear_map() {
     layerGroup = L.layerGroup().addTo(map);
 
     var items = [];
-    var airtable_read_endpoint = "https://api.airtable.com/v0/appKIU0zkdHt3AVTL/Venues?api_key=keycj6dRwXwYLEjiv";
+    var airtable_read_endpoint = "https://api.airtable.com/v0/appZO4hwQXKmZ6LrP/parkmap?api_key=key7oCf96ZfebBLeo";
     var data = [];
     $.getJSON(airtable_read_endpoint, function(result) {
           $.each(result.records, function(key,value) {
@@ -93,7 +93,7 @@ $(document).ready(function(){
       var items = [];
       var i = 0;
       $('.table-responsive').show();
-      var airtable_read_endpoint = "https://api.airtable.com/v0/appKIU0zkdHt3AVTL/Roll-up?api_key=keycj6dRwXwYLEjiv";
+      var airtable_read_endpoint = "https://api.airtable.com/v0/appZO4hwQXKmZ6LrP/parkmap?api_key=key7oCf96ZfebBLeo";
       $.getJSON(airtable_read_endpoint, function(result) {
             $.each(result.records, function(key,value) {
                 items = [];
@@ -123,7 +123,7 @@ $(document).ready(function(){
         var items = [];
         var i = 0;
         $('.table-responsive').show();
-        var airtable_read_endpoint = "https://api.airtable.com/v0/appKIU0zkdHt3AVTL/Roll-up?api_key=keycj6dRwXwYLEjiv";
+        var airtable_read_endpoint = "https://api.airtable.com/v0/appZO4hwQXKmZ6LrP/parkmap?api_key=key7oCf96ZfebBLeo";
         $.getJSON(airtable_read_endpoint, function(result) {
               $.each(result.records, function(key,value) {
                   items = [];
