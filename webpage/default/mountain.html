@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark"><a class="navbar-brand" href="#" contenteditable="true">HK｜Nature</a>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="nav">
+            <li class="nav-item show">
+              <a class="nav-link active" href="homepage.html" aria-expanded="true">首页</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">趣玩分类</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="park.html">🌲清新公园</a>
+                <a class="dropdown-item" href="beach.html">🌊海浪沙滩</a>
+                <a class="dropdown-item" href="mountain.html">⛰️山脉徒步</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">个性推荐</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="free.html">🎉免费入场</a>
+                <a class="dropdown-item" href="activity.html">💰付费活动</a>
+                <a class="dropdown-item" href="lover.html">👫情侣共度</a>
+                <a class="dropdown-item" href="team.html">🏠团建群游</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a href="safe.html" class="nav-link active">安全贴士</a>
+            </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link active">联系我们</a>
+            </li>
+          </ul>
+        </div>
+      </div> <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar11">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar11">
+        <ul class="navbar-nav mr-auto">
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="py-4" style="	background-image: url(/Users/songxuyan/Documents/webpage/image/5.jpg);	background-position: center;	background-size: cover;	background-repeat: repeat;">
+    <div class="container">
+      <div class="row">
+        <div class="p-5 bg-white ml-auto col-md-5 border">
+          <h1>⛰️徒步山脉</h1>
+          <p class="mb-3">多年来，徒步(Hiking)一直是深受香港人喜爱的运动与休闲方式。香港山多平地少，是一座受到海水淹没的多山地体。境内山陵可与华南丘陵视为一体，香港约有650平方公里，即约60%陆地总面积属天然山坡。自然山景开阔壮美，多彩瑰丽</p> <a class="btn btn-primary" href="#">开始探索</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="airtable-embed" src="https://airtable.com/embed/shrHY6oYG7uQVykUF?backgroundColor=yellow&amp;viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="text-center mb-3"><b>-地 图 -</b></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-0">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group justify-content-center d-flex flex-row align-items-baseline flex-grow-1">
+            <select id="filter" class="form-control form-control-sm" style="width:auto; display:inline;" onchange="place_marker()">
+              <option value="" disabled="" selected="">Please select</option>
+              <option value="0">大帽山</option>
+              <option value="1">凤凰山</option>
+              <option value="2">流浮山</option>
+              <option value="3">西高山</option>
+              <option value="4">大东山</option>
+              <option value="5">魔鬼山</option>
+              <option value="6">千岛湖群岛</option>
+              <option value="7">鹤咀</option>
+              <option value="8">黄牛山</option>
+              <option value="9">红香炉峰</option>
+              <option value="10">犀牛石</option>
+              <option value="11">菠萝山</option>
+            </select>
+            <button type="button" class="btn btn-outline-primary btn-sm" id="roll_up" onclick="show_districts();">定位</button>
+            <button type="button" class="btn btn-outline-primary btn-sm" id="roll_up" onclick="clear_map();" style="
+                          border-style: solid;
+                          border-width: 1px;
+                          border-color: #327ab7;
+                      ">恢复</button>
+            <button type="button" class="btn btn-outline-primary btn-sm" id="roll_up" onclick="remove_map();">移除</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-1">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59050.289182880595!2d114.14842632321631!3d22.329334635347106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3403f8acef094f63%3A0xdf79234740ef02c4!2z5Lmd6b6Z!5e0!3m2!1szh-CN!2shk!4v1607335248594!5m2!1szh-CN!2shk" width="100%" height="400" frameborder="0" allowfullscreen="" aria-hidden="false" style="border:0;" tabindex="0"></iframe></div>
+      </div>
+    </div>
+  </div>
+  <div class="py-3 bg-dark" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-6 p-3">
+          <h5> <b class="text-light">关于我们</b></h5>
+          <ul class="list-unstyled">
+            <li>
+              <p class="mb-0 text-light"><b> “香港自然指南”致力于提供香港实时的自然景观攻略与信心，鼓励大家偶尔短暂逃离水泥森林回归自然，同时在疫情期间以尽可能健康的方式摘下口罩呼吸新鲜空气🌲</b></p>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 p-3 text-light">
+          <h5> <b>联系我们</b></h5>
+          <p class="mb-2"><b>电话：</b><br><b>+852 9820 0271</b><br></p>
+          <p class="mb-2"><b> 邮箱：</b><br><b>hknature@gmail.com</b></p>
+          <p class="mb-0"><b>地址：</b><br><b>香港九龙新界沙田中心互宁大厦9层C座</b></p>
+        </div>
+        <div class="col-lg-3 col-md-6 p-3">
+          <h5 class="text-light"> <b>关注我们</b></h5>
+          <div class="row">
+            <div class="col-md-12 d-flex align-items-center justify-content-between my-2"> <a class="btn text-white" href="#" style="background:#55acee" target="_blank"><i class="fa fa-twitter fa-fw fa-1x py-1"></i></a> <a class="btn text-white" href="#" style="background:#3b5998" target="_blank"><i class="fa fa-facebook fa-fw fa-1x py-1"></i></a> <a class="btn text-white" href="#" style="background:#cc2127" target="_blank"><i class="fa fa-pinterest-p fa-fw fa-1x py-1"></i></a>
+              <div class="row">
+                <div class="col-md-12"><a class="btn text-white" href="#" style="background:#e52d27" target="_blank"><i class="fa fa-youtube-play fa-fw fa-1x py-1"></i></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-6 p-3">
+          <h5> <b class="text-light">加入我们</b></h5>
+          <form id="c_form-h" class="">
+            <div class="form-group row"> <label for="inputmailh" class="col-form-label col-4 text-light">邮箱</label>
+              <div class="col-10">
+                <input type="email" class="form-control mx-auto" id="inputmailh" placeholder="mail@example.com"> </div>
+            </div>
+            <div class="form-group row"> <label for="inputpasswordh" class="col-form-label col-4 text-light">密码</label>
+              <div class="col-10">
+                <input type="password" class="form-control" id="inputpasswordh" placeholder="Password"> </div>
+            </div>
+            <button type="submit" class="btn btn-primary mt-2">成为会员</button>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p class="mb-0 mt-2 text-light">© Copyright ©2020 香港自然指南 All rights reserved | 香港中文大学@SONG XUYAN</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <pingendo onclick="window.open('https://pingendo.com/', '_blank')" style="cursor:pointer;position: fixed;bottom: 20px;right:20px;padding:4px;background-color: #00b0eb;border-radius: 8px; width:220px;display:flex;flex-direction:row;align-items:center;justify-content:center;font-size:14px;color:white">Made with Pingendo Free&nbsp;&nbsp;<img src="https://pingendo.com/site-assets/Pingendo_logo_big.png" class="d-block" alt="Pingendo logo" height="16"></pingendo>
+</body>
+
+</html>
